@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+#include <string>
+#include <vector>
+using namespace std;
+
+void evenElements(int digit[], int size);
+void evenIndexes(int digit[], int size);
+
+int main() {
+	int values[10];
+	cout << "The random integers:";
+	srand(time(0));
+	for (int i = 0; i < 10; i++) {
+		values[i] = rand() % 8999 + 1000;
+	
+		cout << " " << values[i] << " ";
+	
+	}
+	evenElements(values, 10);
+	
+
+}
+
+void evenElements(int digit[], int size) {
+	cout << "\nEven values: ";
+	for (int i = 0; i < size; i++) {
+		if (digit[i] % 2 == 0) {
+			cout << " " << digit[i] << " ";
+		}
+	}
+}
+void evenIndexes(int digit[], int size) {
+	cout << "Even indices:";
+	for (int i = 0; i < size; i++) {
+		if (i % 2 == 0) {
+			cout << " " << digit[1] << " ";
+		}
+
+		}
+
+	}
+
+
+	
+	
+
+
+
+
+
